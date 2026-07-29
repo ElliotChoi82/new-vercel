@@ -51,13 +51,20 @@
   }
   .links {
     width: 100%;
-    max-width: 420px;
-    display: flex;
-    flex-direction: column;
+    max-width: 860px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  @media (max-width: 640px) {
+    .links {
+      grid-template-columns: 1fr;
+    }
+  }
   a.card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -80,6 +87,7 @@
   .banner-1 { background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc05, #34a853); }
   .banner-2 { background: linear-gradient(135deg, #6d28d9, #db2777); }
   .banner-3 { background: linear-gradient(135deg, #16a34a, #15803d); }
+  .banner-4 { background: linear-gradient(135deg, #0891b2, #0369a1); }
   .badge {
     width: 68px;
     height: 68px;
@@ -97,6 +105,7 @@
   }
   .content {
     padding: 16px 20px 20px;
+    flex: 1;
   }
   .title {
     font-weight: 700;
@@ -163,6 +172,19 @@
         <div class="title">왕배푸른숲도서관</div>
         <p class="blurb">경기도 화성시 동탄에 위치한 도서관으로, 도서 검색·대출, 문화강좌 신청, 희망도서 신청 등의 서비스를 제공합니다.</p>
         <div class="domain">hscitylib.or.kr</div>
+      </div>
+    </a>
+
+    <a class="card" href="https://yeyak.hscity.go.kr/index.do" target="_blank" rel="noopener noreferrer">
+      <div class="banner banner-4">
+        <div class="badge">
+          <img src="https://www.google.com/s2/favicons?domain=yeyak.hscity.go.kr&sz=128" alt="화성특례시 통합예약시스템 로고">
+        </div>
+      </div>
+      <div class="content">
+        <div class="title">화성특례시 통합예약시스템</div>
+        <p class="blurb">강좌·교육, 시설 대관, 문화·체험 프로그램 등 화성시의 다양한 공공 서비스를 한곳에서 검색하고 예약할 수 있는 통합 예약 사이트입니다.</p>
+        <div class="domain">yeyak.hscity.go.kr</div>
       </div>
     </a>
   </main>
