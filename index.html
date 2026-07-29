@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>바로가기 홈페이지</title>
+<title>링크 천국</title>
 <style>
   :root {
     color-scheme: light dark;
@@ -48,6 +48,12 @@
     color: var(--muted);
     margin: 0;
     font-size: 0.95rem;
+  }
+  .section-title {
+    width: 100%;
+    max-width: 860px;
+    font-size: 1.2rem;
+    margin: 0 0 14px;
   }
   .links {
     width: 100%;
@@ -122,6 +128,44 @@
     font-size: 0.8rem;
     color: var(--muted);
   }
+  .spots {
+    width: 100%;
+    max-width: 860px;
+    margin-top: 44px;
+  }
+  .spots h2 {
+    font-size: 1.2rem;
+    margin: 0 0 14px;
+  }
+  .spot-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .spot-list li {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px 18px;
+  }
+  .spot-list a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .spot-list a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .spot-list .spot-desc {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-top: 2px;
+    line-height: 1.5;
+  }
   footer {
     margin-top: 48px;
     font-size: 0.8rem;
@@ -131,10 +175,11 @@
 </head>
 <body>
   <header>
-    <h1>바로가기 홈페이지</h1>
+    <h1>링크 천국</h1>
     <p class="subtitle">아래 링크를 눌러 원하는 사이트로 이동하세요</p>
   </header>
 
+  <h2 class="section-title">생활 속 링크</h2>
   <main class="links">
     <a class="card" href="https://artsandculture.google.com/" target="_blank" rel="noopener noreferrer">
       <div class="banner banner-1">
@@ -188,6 +233,32 @@
       </div>
     </a>
   </main>
+
+  <section class="spots">
+    <h2>나라별 관광 정보</h2>
+    <ul class="spot-list">
+      <li>
+        <a href="https://korean.visitkorea.or.kr/" target="_blank" rel="noopener noreferrer">대한민국 구석구석 (한국)</a>
+        <div class="spot-desc">한국관광공사가 운영하는 국내여행 정보 포털로, 전국의 관광지·축제·맛집 정보와 추천 여행 코스를 제공합니다.</div>
+      </li>
+      <li>
+        <a href="https://www.japan.travel/ko/" target="_blank" rel="noopener noreferrer">Japan Travel (일본)</a>
+        <div class="spot-desc">일본정부관광국(JNTO)이 운영하는 공식 관광 포털로, 전국의 명소·축제·모델 코스 등 일본 여행 정보를 한국어로 제공합니다.</div>
+      </li>
+      <li>
+        <a href="https://www.visittheusa.com/ko/" target="_blank" rel="noopener noreferrer">Visit The USA (미국)</a>
+        <div class="spot-desc">미국 관광청이 운영하는 공식 사이트로, 주·도시별 명소와 여행 가이드, 비자·입국 정보를 한국어로 제공합니다.</div>
+      </li>
+      <li>
+        <a href="https://www.france.fr/ko" target="_blank" rel="noopener noreferrer">France.fr (프랑스)</a>
+        <div class="spot-desc">프랑스 관광청 공식 사이트로, 파리를 비롯한 프랑스 전역의 명소·문화·행사 정보를 한국어로 소개합니다.</div>
+      </li>
+      <li>
+        <a href="https://www.visitchina.or.kr/" target="_blank" rel="noopener noreferrer">Visit China (중국)</a>
+        <div class="spot-desc">중국주서울관광사무소가 운영하는 공식 사이트로, 베이징·상하이 등 중국 주요 지역의 관광 정보를 제공합니다.</div>
+      </li>
+    </ul>
+  </section>
 
   <footer>© 2026 바로가기 홈페이지</footer>
 </body>
