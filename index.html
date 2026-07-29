@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바로가기 홈페이지</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f6f8;
+    --card-bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --border: #e5e7eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #111318;
+      --card-bg: #1b1e26;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --accent: #60a5fa;
+      --border: #2a2e38;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    padding: 48px 20px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  h1 {
+    font-size: 1.8rem;
+    margin: 0 0 8px;
+  }
+  p.subtitle {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .links {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  a.card {
+    display: block;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  a.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--accent);
+  }
+  .banner {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-1 { background: linear-gradient(135deg, #4285f4, #ea4335, #fbbc05, #34a853); }
+  .banner-2 { background: linear-gradient(135deg, #6d28d9, #db2777); }
+  .banner-3 { background: linear-gradient(135deg, #16a34a, #15803d); }
+  .badge {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  }
+  .badge img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+  .content {
+    padding: 16px 20px 20px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  .blurb {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+    margin: 0 0 8px;
+  }
+  .domain {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  footer {
+    margin-top: 48px;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>바로가기 홈페이지</h1>
+    <p class="subtitle">아래 링크를 눌러 원하는 사이트로 이동하세요</p>
+  </header>
+
+  <main class="links">
+    <a class="card" href="https://artsandculture.google.com/" target="_blank" rel="noopener noreferrer">
+      <div class="banner banner-1">
+        <div class="badge">
+          <img src="https://www.google.com/s2/favicons?domain=artsandculture.google.com&sz=128" alt="구글 아트 앤 컬처 로고">
+        </div>
+      </div>
+      <div class="content">
+        <div class="title">구글 아트 앤 컬처</div>
+        <p class="blurb">전 세계 미술관·박물관의 작품을 고화질로 감상하고, 가상 투어와 문화 관련 게임도 즐길 수 있는 구글의 문화예술 플랫폼입니다.</p>
+        <div class="domain">artsandculture.google.com</div>
+      </div>
+    </a>
+
+    <a class="card" href="https://yarn.co" target="_blank" rel="noopener noreferrer">
+      <div class="banner banner-2">
+        <div class="badge">
+          <img src="https://www.google.com/s2/favicons?domain=yarn.co&sz=128" alt="YRAN 로고">
+        </div>
+      </div>
+      <div class="content">
+        <div class="title">YRAN</div>
+        <p class="blurb">영화·TV·음악 속 명대사를 기반으로 짧은 영상 클립을 검색하고 공유할 수 있는 콘텐츠 플랫폼입니다.</p>
+        <div class="domain">yarn.co</div>
+      </div>
+    </a>
+
+    <a class="card" href="https://www.hscitylib.or.kr/wblib/index.do" target="_blank" rel="noopener noreferrer">
+      <div class="banner banner-3">
+        <div class="badge">
+          <img src="https://www.hscitylib.or.kr/include/image/wblib/common/logo.png" alt="왕배푸른숲도서관 로고">
+        </div>
+      </div>
+      <div class="content">
+        <div class="title">왕배푸른숲도서관</div>
+        <p class="blurb">경기도 화성시 동탄에 위치한 도서관으로, 도서 검색·대출, 문화강좌 신청, 희망도서 신청 등의 서비스를 제공합니다.</p>
+        <div class="domain">hscitylib.or.kr</div>
+      </div>
+    </a>
+  </main>
+
+  <footer>© 2026 바로가기 홈페이지</footer>
+</body>
+</html>
